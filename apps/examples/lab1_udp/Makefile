@@ -1,0 +1,12 @@
+include $(APPDIR)/Make.defs
+
+# Lab1 UDP built-in application info
+PROGNAME  = $(CONFIG_EXAMPLES_LAB1_UDP_PROGNAME)
+PRIORITY  = $(CONFIG_EXAMPLES_LAB1_UDP_PRIORITY)
+STACKSIZE = $(CONFIG_EXAMPLES_LAB1_UDP_STACKSIZE)
+MODULE    = $(CONFIG_EXAMPLES_LAB1_UDP)
+
+# Lab1 UDP Example
+MAINSRC   = lab1_udp.c
+
+include $(APPDIR)/Application.mk

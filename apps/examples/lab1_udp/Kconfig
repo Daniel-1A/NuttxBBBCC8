@@ -1,0 +1,23 @@
+config EXAMPLES_LAB1_UDP
+    tristate "Lab1 UDP example"
+    default n
+    ---help---
+        Servidor UDP simple que recibe mensajes y los muestra por consola.
+
+if EXAMPLES_LAB1_UDP
+
+config EXAMPLES_LAB1_UDP_PROGNAME
+    string "Program name"
+    default "lab1_udp"
+    ---help---
+        Nombre del programa que aparecerá en NSH.
+
+config EXAMPLES_LAB1_UDP_PRIORITY
+    int "Lab1 UDP task priority"
+    default 100
+
+config EXAMPLES_LAB1_UDP_STACKSIZE
+    int "Lab1 UDP stack size"
+    default DEFAULT_TASK_STACKSIZE
+
+endif
